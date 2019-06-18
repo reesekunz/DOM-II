@@ -9,10 +9,13 @@ function changeColor()
 
 funBus.addEventListener("click", changeColor);
 
-// #2 Header text changes on mouseover 
+//funBus.addEventListener("click", changeColor =>
+//{changeColor.preventDefault()} ); 
+
+// #2 Header text changes on mouseover
 
 function changeText()
-{funBus.textContent = "MORE FUN THAN AN UBER, CHEAPER THAN A LIMO"};
+{funBus.textContent = "MORE FUN THAN AN UBER, CHEAPER THAN A LIMO";}
 
 funBus.addEventListener("mouseover", changeText);
 
@@ -54,7 +57,7 @@ image2.addEventListener("scroll", lebronJamesBus);
 
 // #7 Change Fun Bus text on load 
 
-let funBusNav = document.querySelector(".logo-heading);
+let funBusNav = document.querySelector(".logo-heading")
 
 function gusBus ()
 {funBusNav.textContent = "Gus Bus!"};
@@ -88,4 +91,25 @@ function footerTextChange ()
 
 footerText.addEventListener = ("focus", footerTextChange);
 
+// Nesting nav link with event propagation 
 
+let navLink1 = document.querySelector(".nav-link");
+let navBar1 = document.querySelector(".nav");
+
+//navBar1.addEventListener("click", (e) => {
+//console.log("nav bar clicked";)
+//});
+
+navLink1.addEventListener("click", (e) =>
+{console.log("nav link 1 clicked")
+e.stopPropagation();
+})
+
+// Navigation prevent default 
+
+let navBar = document.querySelector('header nav');
+
+navBar.addEventListener('click', event =>
+{event.preventDefault()
+//console.log('Clicked!')
+} ); 
