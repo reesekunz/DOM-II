@@ -4,13 +4,13 @@
 
 let funBus = document.querySelector("h2");
 
+console.log(funBus);
+
 function changeColor()
 {funBus.style.color = "yellow";}
 
 funBus.addEventListener("click", changeColor);
 
-//funBus.addEventListener("click", changeColor =>
-//{changeColor.preventDefault()} ); 
 
 // #2 Header text changes on mouseover
 
@@ -19,18 +19,24 @@ function changeText()
 
 funBus.addEventListener("mouseover", changeText);
 
+
 // #3 Magic School bus image appears on double click 
 
 let busImage = document.querySelector(".intro img");
+
+console.log(busImage);
 
 function changeImage()
 {busImage.src = "http://www.govst.edu/uploadedImages/About/Center_for_Performing_Arts/Arts_and_Education/School_Performances/Magic_School_Bus_767x340.jpg"};
 
 busImage.addEventListener("dblclick", changeImage);
 
+
 // #4 Header paragraph text changes on keydown
 
 let headerText = document.querySelector(".intro p");
+
+console.log(headerText);
 
 function editParagraph()
 {headerText.textContent = "This bus was the most fun out of all the busses. And Ive been on a lot of busses - Kevin Malone"};
@@ -41,50 +47,65 @@ headerText.addEventListener("keydown", editParagraph);
 
 let headerText2 = document.querySelector(".text-content h2");
 
+console.log(headerText2);
+
 function lebronJames ()
 {headerText2.textContent = "LeBron James took this bad boy to every home game when he was in Miami."};
 
 headerText2.addEventListener("wheel", lebronJames);
 
+
 // #6 Change second image to LeBron James on a bus on scroll 
 
 let image2 = document.querySelector(".img-content img");
 
+console.log(image2);
+
 function lebronJamesBus ()
 {image2.src = "https://cavsnation.com/wp-content/uploads/2014/08/lebron-paul-bus.jpg"};
 
-image2.addEventListener("scroll", lebronJamesBus);
+window.addEventListener("scroll", lebronJamesBus);
+
 
 // #7 Change Fun Bus text on load 
 
 let funBusNav = document.querySelector(".logo-heading")
+
+console.log(funBusNav);
 
 function gusBus ()
 {funBusNav.textContent = "Gus Bus!"};
 
 funBusNav.addEventListener("load", gusBus);
 
-// #8 Change paragraph color on select 
+
+// #8 Change paragraph color on select start 
 
 let paragraphColor = document.querySelector(".text-content p");
+
+console.log(paragraphColor);
 
 function paragraphColorChange()
 {paragraphColor.style.color = "red";}
 
-paragraphColor.addEventListener("select", paragraphColorChange);
+paragraphColor.addEventListener("selectstart", paragraphColorChange);
 
 // #9 Change font size on resize for every paragraph 
 
 let paragraphFontSize = document.querySelectorAll("p");
 
+console.log(paragraphFontSize);
+
 function paragraphFontSizeChange ()
 {paragraphFontSize.style.fontSize = "2.2rem";}
 
-paragraphFontSize.addEventListener = ("resize", paragraphFontSizeChange);
+window.addEventListener = ("resize", paragraphFontSizeChange);
 
 // #10 Change footer text on focus 
 
 let footerText = document.querySelector(".footer p");
+
+console.log(footerText);
 
 function footerTextChange ()
 {footerText.textContent = "You better get on that fun bus boi";}
@@ -96,9 +117,9 @@ footerText.addEventListener = ("focus", footerTextChange);
 let navLink1 = document.querySelector(".nav-link");
 let navBar1 = document.querySelector(".nav");
 
-//navBar1.addEventListener("click", (e) => {
-//console.log("nav bar clicked";)
-//});
+console.log(navLink1);
+console.log(navBar1);
+
 
 navLink1.addEventListener("click", (e) =>
 {console.log("nav link 1 clicked")
@@ -109,8 +130,13 @@ e.stopPropagation();
 
 let navBar = document.querySelector('header nav');
 
+console.log(navBar);
+
 navBar.addEventListener('click', event =>
 {event.preventDefault()
-//console.log('Clicked!')
+console.log('Clicked!')
 } ); 
+
+
+
 
