@@ -1,3 +1,4 @@
+
 // #1 Nav links change to red on mouseover
 
 let navLinks = document.querySelectorAll(".nav-link");
@@ -133,24 +134,23 @@ function lebronJamesBus ()
 
 window.addEventListener("scroll", lebronJamesBus);
 
-// #10 
+// #10 Change last paragraph on mouseover 
+
+let island = document.querySelector(".island");
 
 
+function changeIsland(){
+    island.textContent = "Honestly, don't even pick this one it's a waste of money";
+  }
+
+  function changeIslandBack(){
+    island.textContent = "Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.";
+  }
 
 
+  island.addEventListener("mouseover", changeIsland);
 
-
-// End of Refactoring
-
-
-
-
-
-
-
-
-
-
+  island.addEventListener("mouseleave", changeIslandBack);
 
 
 // Nesting nav link with event propagation
