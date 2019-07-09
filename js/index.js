@@ -80,8 +80,61 @@ function changeHeaderText(){
   welcomeHeader.addEventListener("mouseover", changeHeaderText);
 
   welcomeHeader.addEventListener("mouseleave", changeHeaderTextBack);
+
+  // #6 Magic School bus image appears on double click
   
+let busImage = document.querySelector(".intro img");
+
+function changeImage()
+{busImage.src = "http://www.govst.edu/uploadedImages/About/Center_for_Performing_Arts/Arts_and_Education/School_Performances/Magic_School_Bus_767x340.jpg"};
+
+busImage.addEventListener("dblclick", changeImage);
+
+// #7 Each paragraph text changes on paste 
+
+let paragraphs = document.querySelectorAll("p");
+function changeP(paragraph, text) {
+ paragraph.textContent = `${text}`;
+}
+
+paragraphs.forEach(paragraph => {
+ paragraph.addEventListener("paste", () => {
+   changeP(paragraph, "Dude get your own content");
+ });
+
+});
+
+// #8 Change button background colors on mouseover
+
+let buttons = document.querySelectorAll(".btn");
+function changeButton(button, color) {
+ button.style.backgroundColor = `${color}`;
+}
+
+buttons.forEach(button => {
+ button.addEventListener("mouseover", () => {
+   changeButton(button, "yellow");
+ });
+
+   button.addEventListener("mouseleave", () => {
+   changeButton(button, "black");
+ })
   
+});
+
+// #9 Change second image to LeBron James on a bus on scroll
+
+let image2 = document.querySelector(".img-content img");
+
+console.log(image2);
+
+function lebronJamesBus ()
+{image2.src = "https://cavsnation.com/wp-content/uploads/2014/08/lebron-paul-bus.jpg"};
+
+window.addEventListener("scroll", lebronJamesBus);
+
+// #10 
+
 
 
 
