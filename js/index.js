@@ -1,10 +1,28 @@
 // Your code goes here
 
+
+// #1 Nav links change to red on mouseover
+
+let navLinks = document.querySelectorAll(".nav-link");
+function changeLink(link, color) {
+ link.style.color = `${color}`;
+}
+
+navLinks.forEach(link => {
+ link.addEventListener("mouseover", () => {
+   changeLink(link, "darkred");
+ });
+
+   link.addEventListener("mouseleave", () => {
+   changeLink(link, "black");
+ })
+  
+});
+
+
 // #1 - Header changes to yellow on click 
 
 let funBus = document.querySelector("h2");
-
-console.log(funBus);
 
 function changeColor()
 {funBus.style.color = "yellow";}
@@ -136,7 +154,4 @@ navBar.addEventListener('click', event =>
 {event.preventDefault()
 console.log('Clicked!')
 } ); 
-
-
-
 
